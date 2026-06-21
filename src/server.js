@@ -8,11 +8,15 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://agro-app-frontend-lac.vercel.app/"
-    ]
+  origin: [
+    "http://localhost:5173",
+    "https://agro-app-frontend-lac.vercel.app",
+    "https://agro-app-frontend-fgpmetsev-rolin-s-projects.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true
 }));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
