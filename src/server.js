@@ -7,7 +7,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://agro-app-frontend-lac.vercel.app/"
+    ]
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
