@@ -11,7 +11,6 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://agro-app-frontend-lac.vercel.app",
-    "https://agro-app-frontend-fgpmetsev-rolin-s-projects.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true
